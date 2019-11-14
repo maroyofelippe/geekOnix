@@ -3,48 +3,142 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geek Onix Portal</title>
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./css/localstyle.css">
     <script src="https://kit.fontawesome.com/d7a880eefe.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./js/func.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <div id="header"></div>
-    <div id="content">
-        <div id="cardone">
-            <div class="card" style="width: 18rem;">
-                <img src="./img/starwars.png" class="card-img-top" alt="STAR WARS">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; width: 100%; top:0px; z-index:10">
+        <a class="navbar-brand" href="#">OnixGeek</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       Conteúdo
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#content1">content1</a>
+                        <a class="dropdown-item" href="#content2">content2</a>
+                        <a class="dropdown-item" href="#content3">content3</a>
+                        <a class="dropdown-item" href="#content4">content4</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#footer">Mapa do Site</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <i class="fas fa-user"></i> <input class="form-control mr-sm-2" type="text" placeholder="Digite seu e-mail" aria-label="Search">
+                <i class="fas fa-key"></i> <input class="form-control mr-sm-2" type="password" placeholder="Digite sua Senha" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+            </form>
+        </div>
+    </nav>
+    <!-- DIV Header-->
+    <div id="header">
+        <h1>Header</h1>
+    </div>
+
+    <!-- DIV para colocar os CARDs-->
+    <div id="cardsall">
+        <div class="card-deck">
+            <div class="card" style="top: 4px;">
+                <img src="./img/geek.png" class="card-img-top" alt="Geek">
                 <div class="card-body">
-                    <h5 class="card-title">Star Wars</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-title">G E E K</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Atualizado 3 min atrás</small>
                 </div>
             </div>
-        </div>
-        <div id="cardtwo">
-            <div class="card" style="width: 18rem;">
-                <img src="./img/onix_blue.jpg" class="card-img-top" alt="ONIX">
+            <div class="card" style="top: 4px;">
+                <img src="./img/images (1).jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Onix Blue</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Atualizado 3 min atrás</small>
                 </div>
             </div>
-        </div>
-        <div id="cardthree">
-            <div class="card" style="width: 18rem;">
-                <img src="./img/geek.png" class="card-img-top" alt="GEEK">
-                <div class="card-body">
-                    <h5 class="card-title">Geek</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="card" style="top: 4px;">
+                <img src=" ./img/starwars.png " class="card-img-top " alt="... ">
+                <div class="card-body ">
+                    <h5 class="card-title ">STAR WARS</h5>
+                    <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+                <div class="card-footer ">
+                    <small class="text-muted ">Atualizado 3 min atrás</small>
                 </div>
             </div>
+
         </div>
+
+
+    </div>
+    <div id="content1">
+        <h2>Content1</h2>
+
+    </div>
+    <div id="content2">
+        <h2>Content2</h2>
+
+    </div>
+    <div id="content3">
+        <h2>Content3</h2>
+
+    </div>
+    <div id="content4">
+        <h2>Content4</h2>
+
     </div>
     <div id="footer">
 
+        <table class="table">
+            <caption>List of users</caption>
+            <thead>
+                <tr>
+                    <th scope="col" colspan="3" style="text-align: center;">Mapa do Site</th>
+                    <th scope="col" colspan="2" style="text-align: center;">Midia Social</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Header</td>
+                    <td>Footer</td>
+                    <td>Destaques</td>
+                    <td><a href="www.instagram.com"><i class="fab fa-instagram"></i>Instagram</a></td>
+                    <td><a href="www.github.com"><i class="fab fa-github-square"></i>Github</a></td>
+                </tr>
+                <tr>
+                    <td>Conteúdo 1</td>
+                    <td>Conteúdo 2</td>
+                    <td></td>
+                    <td><a href="www.facebook.com"><i class="fab fa-facebook-square"></i>facebook</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Conteúdo 3</td>
+                    <td>Conteúdo 4</td>
+                    <td></td>
+                    <td><a href="www.youtube.com"><i class="fab fa-youtube"></i>Youtube</a></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 
