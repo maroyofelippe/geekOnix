@@ -70,7 +70,7 @@
                         line-height: 1.5;
                         color: #212529;
                         text-align: left;
-                        background-color: rgb(6, 152, 189);
+                        background-color: #E9ECEF;
                     }
                     
                     [tabindex="-1"]:focus {
@@ -93,9 +93,14 @@
                         margin-bottom: 0.5rem;
                     }
                     
+                    h2 {
+                        text-align: center;
+                    }
+                    
                     p {
                         margin-top: 0;
                         margin-bottom: 1rem;
+                        text-align: justify;
                     }
                     
                     abbr[title],

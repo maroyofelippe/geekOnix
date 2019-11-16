@@ -51,7 +51,7 @@ function testaCPF(strCPF) {
     }
 }
 //Adiciona . e - ao CPF, NÃO ESTÁ FUNCIONANDO AINDA//
-function mascaraDOCpf(strCPF) {
+/*function mascaraDoCpf(strCPF) {
     const textoAtual = strCPF.value;
     const isCpf = textoAtual.length == 11;
     let textoAjustado;
@@ -63,7 +63,7 @@ function mascaraDOCpf(strCPF) {
         textoAjustado = `${parte1}.${parte2}.${parte3}-${parte4}`
         strCPF.value = textoAjustado;
     }
-}
+}*/
 //Fim do código testador de CPF//
 
 //Testa o CEP e adiciona Cidade,Estado,Bairro... Utilizar no Id exatamente como está os nomes do Id para campo FUNCIONANDO// 

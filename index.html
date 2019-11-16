@@ -15,7 +15,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; width: 100%; top:0px; z-index:10">
-        <a class="navbar-brand" href="#">OnixGeek</a>
+        <a class="navbar-brand" href="#">OnixGeekRD</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -30,10 +30,10 @@
                        Conteúdo
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#content1">content1</a>
-                        <a class="dropdown-item" href="#content2">content2</a>
-                        <a class="dropdown-item" href="#content3">content3</a>
-                        <a class="dropdown-item" href="#content4">content4</a>
+                        <a class="dropdown-item" href="#content1">Geek ou Nerd?</a>
+                        <a class="dropdown-item" href="#content2">Eventos Geek</a>
+                        <a class="dropdown-item" href="#content3">Peter Jordan</a>
+                        <a class="dropdown-item" href="#content4">Mulheres.br</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#footer">Mapa do Site</a>
                     </div>
@@ -48,63 +48,179 @@
     </nav>
     <!-- DIV Header-->
     <div id="header">
-        <h1>Header</h1>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-2">O n i x - G e e k</h1>
+                <p class="lead" style="text-align: center;">A sua Revista Digital de Cultura.</p>
+            </div>
+        </div>
     </div>
 
-    <!-- DIV para colocar os CARDs-->
+    <!-- DIV para colocar os Carrossel-->
     <div id="cardsall">
-        <div class="card-deck">
-            <div class="card" style="top: 4px;">
-                <img src="./img/geek.png" class="card-img-top" alt="Geek">
-                <div class="card-body">
-                    <h5 class="card-title">G E E K</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <div class="bd-example">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./img/nerd3.jpg" class="d-block w-100" alt="Nerds" style="width: 100%; height: 15%;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Nerds vs Geeks</h5>
+                            <p style="color: red;">Como você se define? Saiba as diferenças entre Nerds e Geeks...</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/DSC02903-melhorada_cortada.webp" class="d-block w-100" alt="Peter Jordan" style="width: 100%; height: 40%;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Peter Jordan</h5>
+                            <p style="color: red;">Youtuber, Programador, Webmaster, Empresário. Conheça a trajetória de sucesso.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/1_elza4-12523858.jpg" class="d-block w-100" alt="Mulheres.br" style="width: 100%; height: 40%;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Mulheres.br</h5>
+                            <p style="color: red;">Personalidades femininas que influenciaram suas épocas...</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/geek.jpg" class="d-block w-100" alt="faltando" style="width: 100%; height: 40%;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p style="color: red;">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-footer">
-                    <small class="text-muted">Atualizado 3 min atrás</small>
-                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                </a>
             </div>
-            <div class="card" style="top: 4px;">
-                <img src="./img/images (1).jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Atualizado 3 min atrás</small>
-                </div>
-            </div>
-            <div class="card" style="top: 4px;">
-                <img src=" ./img/starwars.png " class="card-img-top " alt="... ">
-                <div class="card-body ">
-                    <h5 class="card-title ">STAR WARS</h5>
-                    <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-                <div class="card-footer ">
-                    <small class="text-muted ">Atualizado 3 min atrás</small>
-                </div>
-            </div>
-
         </div>
-
-
     </div>
     <div id="content1">
-        <h2>Content1</h2>
-
+        <br><br><br>
+        <h2>Você é Geek ou Nerd?</h2>
+        <h3>Quais são as diferenças entre os 2 termos</h3>
+        <p>
+            Hoje em dia, virou moda todo mundo dizer que é nerd, geek, hipster e outras denominações que ganharam força com o avanço da internet. No caso dos geeks e nerds, ambos os grupos são confundidos constantemente, e muitas pessoas até acham que os dois são
+            a mesma coisa, talvez pela aparência ou gostos pessoais, que são semelhantes.<br> Mas tenho uma notícia para você: nerds e geeks, na teoria, não são a mesma coisa. E digo mais: os dois perfis são completamente diferentes um do
+            outro. Não entendeu? Pois no infográfico abaixo, desenvolvido pelo site Masters In IT (especializado em levantar análises relacionadas a informações tecnológicas), você vai perceber que, de fato, existe um abismo entre um nerd e um geek de
+            verdade.
+        </p>
+        <h3>Os Nerds</h3>
+        <img src="./img/nerd2.png" class="rounded float-left" alt="Nerds" width="200" height="200">
+        <p>
+            O termo "nerd" foi concebido em 1954 por Theodor Seuss, escritor, poeta e cartunista americano, mais conhecido como Dr. Seuss, que fez uma associação entre a lerdeza e peças de roupa listradas (nas cores branca e azul) para pessoas magras. Basicamente,
+            um nerd é um personagem cômico, geralmente magrelo, e com alguns problemas cognitivos para determinados assuntos.<br> Os traços de um nerd incluem diversas características. Entre elas: interesse extremo e obsessivo com livros e
+            estudos, introversão, dificuldade para se relacionar socialmente; e diversas habilidades mais desenvolvidas devido ao gosto por games, filmes, ciência e computadores. Alguns itens podem incluir o seriado Battlestar Galactica (BSG), Live Action
+            (na maioria para jogos de RPG), SecondLife, xadrez, fantasia e ficcção científica, programação de PCs e física.<br> Quanto aos empregos, os nerds costumam se tornar profissionais como cientistas de foguetes, professores particulares, programadores,
+            engenheiros, TI, inventores ou trabalhar em uma loja de vídeo - muitas vezes visto em alguns seriados de televisão. E claro: quando se fala de "coração", é natural que os nerds namorem com outros nerds.<br> Os assuntos mais falados entre os
+            nerds - que parecem se reconhecer de longe! - envolvem conversas um tanto... esquisitas. Como "Existem 2 tipos de pessoas no mundo: aquelas que entendem binário e as que não entendem". Ou "Eu adoraria mudar o mundo, mas ele ainda não me deu
+            o código fonte". Ou ainda "A caixa dizia que era necessário ter um Windows 95 ou uma versão mais atual. Então, instalei o LINUX". Entendeu?<br> E filmes? Bem, tratando-se dos nerds, os preferidos deles são: "Senhor dos Anéis", "Pi", "Battlestar
+            Galactica" - que só será lançado em 2013 -, "Star Trek" e Matrix.
+        </p>
+        <h3>Os Geeks</h3>
+        <img src="./img/nerd1.png" class="rounded float-left" alt="Geeks" width="200" height="200">
+        <p>
+            Diferente da palavra "nerd", a denominação de geek ganhou força, por incrível que pareça, no circo e nas ruas! Os acrobatas, trapezistas e outros artistas performáticos eram popularmente chamados de Geeks pelos locais em que se apresentavam. Posteriormente,
+            passou-se a designar como "computer geek" aquele que ganha a vida resolvendo bugs de computador.<br> Mas, o primeiro registro da palavra apareceu em 1976, como sinônimo de "fool" (bobo). Só que a expressão só adquiriu definições
+            mais positivas na década de 1990, quando a tecnologia ganhou status de poder libertador. Hoje, o termo é mais específico: geeks são aqueles que se atraem por tudo aquilo que é novidade, principalmente quando o assunto são computadores.<br>            Os traços de um geek são mais centrados que os de um nerd. Eles possuem interesses e estilos de vida mais específicos e se tornam experts naquilo que gostam, mas não se enganem, pois muitas vezes, podem se mostrar pretensiosos e cansativos.
+            Seus gostos pessoais incluem videogames, filmes, colecionar objetos, paixão por gadgets e tecnologia, computação, códigos, hacks, música eletrônica, entre outros. Além disso, costumam usar camisetas com frases irônicas e engraçadas.<br> As
+            profissões mais escolhidas pelos geeks podem ser: web designer/desenvolvedor, TI, designer gráfico, designer/desenvolvedor de jogos, marketer, empresário, dono de uma loja de discos, bartender ou até barista em uma loja de café indie - que
+            os hipsters de plantão com certeza vão saber de quais estou falando. Quanto a namoro, os geeks podem se relacionar tanto com pessoas do mesmo grupo como também os menos fãs da área.<br> E os assuntos? No geral, geeks são reconhecidos quando
+            começam a falar sobre os próprios estilos de vida, e discussões que envolvem hábitos "legais" ou referências da cultura pop. Frases como "Não há nada melhor do que sentir o cheiro de um autêntico perfume Malbec" ou "[Enquanto tira o iPhone
+            do bolso] Deixe-me mostrar meu iPad portátil".
+        </p>
+        <h3>Geeks vs Nerds</h3>
+        <p>
+            De acordo com a pesquisa mostrada no infográfico, 87% das pessoas em todo o mundo são mais adeptas aos geeks do que aos nerds. Além disso, 66% acreditam que "ser geek" é um complemento e 31% acreditam que os geeks possuem grandes chances de serem bem
+            sucedidos no que fazem. E se você acha isso pouco, fique atento: 23% não se importam de ser chamados de hipster, contra 41% daqueles que se sentem bem com o termo "geek".<br> 41% das pessoas se sentem mais confortáveis ao serem
+            chamadas de geek, contra 24% das que preferem de nerds. Já no quesito "cognição', 59% dos geeks são mais inteligentes do que aqueles que não são (43%), 48% se mostram obsessivos com certos aspectos da cultura pop - contra 29% dos não-geeks
+            -, e 47% têm mais chances de se dar bem profissionalmente do que as outras pessoas (28%).<br> O único quesito em desvantagem é o da interação social, pois 34% desse "biotipo" têm algum tipo de distúrbio nesse universo.<br> O infográfico completo
+            pode ser visto aqui. E você, quem acha que ganha essa batalha: os geeks ou os nerds? Depois de ler todas essas informações, em qual grupo acha que se encaixa mais?
+        </p>
+        <blockquote class="blockquote">
+            <p class="mb-0">Fonte Referência</p>
+            <footer class="blockquote-footer">Olhar Digital <cite title="Geek vs Nerds"><a href="https://olhardigital.com.br/games-e-consoles/noticia/geeks-vs-nerds-voce-sabe-o-significado-de-cada-um/23578">Geek vs Nerds</a></cite></footer>
+        </blockquote>
     </div>
     <div id="content2">
-        <h2>Content2</h2>
-
+        <br><br><br><br>
+        <h2 text align="center">Você é do Universo Geek e não sabe o que é?</h2>
+        <p> O conceito de geek é algo parecido ao conceito de nerd: aquela pessoa que tem um profundo interesse por assuntos científicos e tecnológicos, gosta de estudar, é muito inteligente e às vezes é pouco sociável. Geek, é uma gíria da língua inglesa
+            cujo significado é alguém viciado em tecnologia, em computadores e internet. Mas, e aí está se identificando? Se encontrou em alguma definição? Irei continuar a falar sobre esse Universo. A subcultura geek se caracteriza como um estilo de
+            vida, no qual os indivíduos se interessam por tudo que está relacionado à tecnologia e eletrônica. Gostam de filmes de ficção científica (Star Wars, Star Trek e outros), são fanáticos por jogos eletrônicos e jogos de tabuleiro. Os geeks também
+            sabem desenvolver softwares em várias linguagens de programação e, na escola, se destacam dos outros colegas pelos conhecimentos demonstrados. Se identificou agora? Caso ainda esteja duvidando, faça o nosso Quiz.
+            <h2>Eventos </h2>
+            <h3>CCXP</h3>
+            A CCXP, ou Comic Con Experience, segue o formato de outras Comic-Com, antes eram convenções de quadrinhos, que existem ao redor ao mundo(quadrinho, esse mundo), porém é um evento de entretenimento, com a essência. Por isso, a feira reúne apaixonados por
+            HQs, livros, filmes, séries e games. Sim, é o lugar para quem gosta de Harry Potter, Game of Thrones, Turma da Mônica, Cavaleiros do Zodíaco, Marvel, Star Wars, Transformers, X-Men, ama jogos de tabuleiros e de videogames e muito mais.
+            <h3>BGS</h3>
+            A BGS, ou Brasil Game Show, é considerada a maior feira de games da América Latina e maior do mundo em público e área. Agora em 2019, o evento chega à 12ª edição e coloca o gamer como protagonista. A BGS, foi realizada pela primeira vez em 2009, inicialmente
+            como Rio Game Show, na capital fluminense, a BGS atualmente ocupa todos os pavilhões do ExpoCenter Norte, em São Paulo. Além disso, reúne as principais empresas do universo Geek em estúdios, essa feira é palco de grandes lançamentos, abre
+            espaço para estúdios independentes e atrai personalidades da indústria mundial de jogos eletrônicos.
     </div>
     <div id="content3">
-        <h2>Content3</h2>
+        <br><br><br><br>
+        <h2>Peter Jordan</h2>
+        <img src="./img/peterjordan2.jpg" class="rounded mx-auto d-block" alt="Peter Jordan">
+        <p>Peter Jordan é apresentador do Ei Nerd, posta vídeos de reacts, vlogs e bastidores de filmagens no canal Peter Aqui e é criador do Acredite ou não. É responsável pelos conteúdos dos canais que viralizaram com vídeos como Cenas Proibidas do Dragon
+            Ball Z.</p>
+        <p>Jordan é do Rio de Janeiro e morou com a esposa Andreza e seus dois filhos nos Estados Unidos de 2015 a 2019, quando retornou ao Brasil. Além de youtuber, Peter é empresário e dono da Petaxxon, a desenvolvedora que criou os sites Letras e Cifras
+            e tem sede no Brasil e Estados Unidos. Ele também é autor do Almanaque Ei, Nerd, publicado em novembro de 2017. A Petaxxon é uma empresa de inovação, responsável por alguns dos maiores sites de música do Brasil, desde 2001.</p>
+        <p>Peter afirma: "Somos os criadores de grandes sucessos de entretenimento da internet nacional e internacional. Foi com muita vontade de inovar que entramos no mundo online. Lançamos o site Cifras em meados de 2003 com ferramentas inéditas na internet
+            e, até hoje, a cada site e canal lançados no youtube, costumamos criar tendências, modéstia à parte ;)."</p>
+        <p>Desde 2015, a Petaxxon mantém o primeiro escritório fora do país, nos Estados Unidos, com o objetivo de atender melhor nosso público internacional e de aumentar nossa presença no mercado mundial, que não para de crescer. Podem chamar do que quiser:
+            de digital, online, web, internet, virtual e até de nuvem! Gostamos mesmo é de estar sempre conectado com nosso público. link para o site da empresa do Peter
+            <a href="https://www.petaxxon.com.br/">www.petaxxon.com.br</a>.</p>
+        <p>O youtuber Peter Jordan, criador do canal Ei Nerd, tem um título de peso: é um dos maiores produtores de conteúdos geeks no Brasil. Com 8,5 milhões de seguidores, ele produz vídeos sobre filmes de heróis, HQs, animes e mangás. Quase todos esses
+            produtos sempre superam a marca de 1 milhão de views. A visibilidade on-line tornou o rapaz uma verdadeira celebridade em eventos nerds.
+        </p>
 
     </div>
     <div id="content4">
-        <h2>Content4</h2>
+        <br><br><br>
+        <h2>Mulheres.br - Influencers Woman</h2>
+        <div id="mulheresbr">
+            <img src="./img/xmaria-da-penha.jpg.pagespeed.ic.f_na9NkfE7.jpg" class="rounded float-left" alt="Geeks" width="200" height="200">
+            <h3>Maria da Penha</h3>
+            <p>Ela se tornou uma importante figura para a luta pelos direitos das mulheres. Durante quase 20 anos, lutou para conseguir se livrar de seu agressor, seu marido. Sobrevivente de duas tentativas de assassinato, sem contar das inúmeras vezes que
+                foi agredida, tornando ela paraplégica.</p>
+            <p>Graças a persistência dela em querer justiça, hoje existe uma lei com o nome dela que reconhece a gravidade dos casos de violência doméstica, trazendo finalmente a punição em uma das áreas que mais mata mulheres no mundo.</p>
+        </div>
+        <div id="mulheresbr">
+            <img src="./img/1_elza4-12523858.jpg" class="rounded float-left" alt="Geeks" width="200" height="200">
+            <h3>Elza Soares</h3>
+            <p>De família pobre, Elza se casou forçada quando tinha só 12 anos e aos 13 anos virou mãe. Mas nem só de desavenças que se fez o caminho dela, já que impressionou todo mundo os cantar em um programa de calouros, mas só aos 21 anos, quando ficou
+                viúva, que conseguiu seguir a carreira. E hoje é conhecida como uma lenda viva da MPB.</p>
+        </div>
+        <div id="mulheresbr">
+            <img src="./img/tarsiladoamaral-0.jpg" class="rounded float-left" alt="Geeks" width="200" height="200">
+            <h3>Tarsila do Amaral</h3>
+            <p>Conhecida por ser autora da pintura brasileira mais valorizada da história.</p>
+            <p>Abaporu, uma de suas obras mais famosas, também é um ícone do Modernismo no Brasil. Este nome é de cultura indígena e significa “Homem que come carne humana”.</p>
+            <p>Ela foi uma das responsáveis pela organização da revolucionaria Semana da Arte Moderna, que começou em 1922, realizada em São Paulo.</p>
+        </div>
+        <div id="mulheresbr">
+            <img src="./img/hebe-camargo-696x464.jpg" class="rounded float-left" alt="Geeks" width="200" height="200">
+            <h3>Hebe Camargo</h3>
+            <p>Hebe ficou conhecida como a Rainha da Televisão Brasileira, sua carreira como cantora de rádio. Em 1950, já era conhecida como A estrela do rádio de São Paulo. Participou da primeira transmissão ao vivo da televisão brasileira. Seu título
+                de rainha veio quando com seu programa denominado “Hebe”, ficou mais de 40 anos no ar, em diferentes emissoras, em 1970 consagrou seu programa como um dos programas mais populares da televisão, Trabalhou até 2012, quando faleceu por causa
+                de um câncer.</p>
+        </div>
 
     </div>
+
     <div id="footer">
 
         <table class="table">
@@ -120,21 +236,21 @@
                     <td>Header</td>
                     <td>Footer</td>
                     <td>Destaques</td>
-                    <td><a href="www.instagram.com"><i class="fab fa-instagram"></i>Instagram</a></td>
+                    <td><a href="https://www.instagram.com/onixgeekrd2019/"><i class="fab fa-instagram"></i>Instagram</a></td>
                     <td><a href="www.github.com"><i class="fab fa-github-square"></i>Github</a></td>
                 </tr>
                 <tr>
                     <td>Conteúdo 1</td>
                     <td>Conteúdo 2</td>
                     <td></td>
-                    <td><a href="www.facebook.com"><i class="fab fa-facebook-square"></i>facebook</a></td>
+                    <td><a href="https://www.facebook.com/onix.geekrd.7"><i class="fab fa-facebook-square"></i>facebook</a></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>Conteúdo 3</td>
                     <td>Conteúdo 4</td>
                     <td></td>
-                    <td><a href="www.youtube.com"><i class="fab fa-youtube"></i>Youtube</a></td>
+                    <td><a href="https://www.youtube.com/channel/UCczRp4bENNL_Lc32uz07C0Q/"><i class="fab fa-youtube"></i>Youtube</a></td>
                     <td></td>
                 </tr>
             </tbody>
