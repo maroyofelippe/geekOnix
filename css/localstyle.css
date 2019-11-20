@@ -12,7 +12,7 @@
     background-color: #E9ECEF;
     position: relative;
     margin: 0 auto;
-    width: 65%;
+    width: 65%%;
     height: 79%;
 }
 
@@ -70,4 +70,23 @@
     position: relative;
     margin: 5px;
     height: 345px;
+}
+
+img.d-block w-100 {
+    max-width: 100%;
+    height: auto;
+}
+
+.collapse i {
+    padding: 8px;
+}
+
+#footer i{
+    padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    p.lead {
+        display: none;
+    }
 }
