@@ -47,24 +47,10 @@ function testaCPF(strCPF) {
         resultadoInvalido = "inválido";
     }
     if (resultadoInvalido != "inválido") {
-        alert("O número do CPF é VÁLIDO");
+        //alert("O número do CPF é VÁLIDO");
     }
+
 }
-//Adiciona . e - ao CPF, NÃO ESTÁ FUNCIONANDO AINDA//
-/*function mascaraDoCpf(strCPF) {
-    const textoAtual = strCPF.value;
-    const isCpf = textoAtual.length == 11;
-    let textoAjustado;
-    if (isCpf) {
-        const parte1 = textoAtual.slice(0, 3);
-        const parte2 = textoAtual.slice(3, 6);
-        const parte3 = textoAtual.slice(6, 9);
-        const parte4 = textoAtual.slice(9, 11);
-        textoAjustado = `${parte1}.${parte2}.${parte3}-${parte4}`
-        strCPF.value = textoAjustado;
-    }
-}*/
-//Fim do código testador de CPF//
 
 //Testa o CEP e adiciona Cidade,Estado,Bairro... Utilizar no Id exatamente como está os nomes do Id para campo FUNCIONANDO// 
 function limpa_formulário_cep() {
@@ -72,7 +58,7 @@ function limpa_formulário_cep() {
     document.getElementById('bairro').value = ("");
     document.getElementById('cidade').value = ("");
     document.getElementById('uf').value = ("");
-    document.getElementById('ibge').value = ("");
+    //document.getElementById('ibge').value = ("");
 }
 
 function meu_callback(conteudo) {
@@ -82,7 +68,7 @@ function meu_callback(conteudo) {
         document.getElementById('bairro').value = (conteudo.bairro);
         document.getElementById('cidade').value = (conteudo.localidade);
         document.getElementById('uf').value = (conteudo.uf);
-        document.getElementById('ibge').value = (conteudo.ibge);
+        //document.getElementById('ibge').value = (conteudo.ibge);
     } else {
 
         limpa_formulário_cep();
@@ -109,7 +95,7 @@ function pesquisacep(valor) {
             document.getElementById('bairro').value = "...";
             document.getElementById('cidade').value = "...";
             document.getElementById('uf').value = "...";
-            document.getElementById('ibge').value = "...";
+            //document.getElementById('ibge').value = "...";
 
             var script = document.createElement('script');
 
@@ -121,7 +107,7 @@ function pesquisacep(valor) {
         } else {
 
             limpa_formulário_cep();
-            alert("Formato de CEP inválido.");
+            //alert("Formato de CEP inválido.");
         }
     } else {
 
@@ -150,6 +136,37 @@ function mascaraDeTelefone(telefone) {
     telefone.value = textoAjustado;
 }
 
+function mascaraDeCep(cep) {
+    const textoAtual = cep.value;
+    const isCep = textoAtual.length == 8;
+    let textoAjustado;
+    if (isCep) {
+        const parte1 = textoAtual.slice(0, 5);
+        const parte2 = textoAtual.slice(5, 8);
+        textoAjustado = `${parte1}-${parte2}`
+    }
+
+    cep.value = textoAjustado;
+}
+
+//Adiciona . e - ao CPF, NÃO ESTÁ FUNCIONANDO AINDA//
+function mascaraDoCpf(cpf) {
+    var cpf = document.getElementById("campo3");
+    const textoAtual = cpf.value;
+    const isCpf = textoAtual.length == 11;
+    let textoAjustado;
+    if (isCpf) {
+        const parte1 = textoAtual.slice(0, 3);
+        const parte2 = textoAtual.slice(3, 6);
+        const parte3 = textoAtual.slice(6, 9);
+        const parte4 = textoAtual.slice(9, 11);
+        textoAjustado = `${parte1}.${parte2}.${parte3}-${parte4}`
+    }
+    cpf.value = textoAjustado;
+}
+//Fim do código testador de CPF//
+
+
 function tiraHifen(telefone) {
     const textoAtual = telefone.value;
     const textoAjustado = textoAtual.replace(/\-\(\)/g, '');
@@ -157,7 +174,34 @@ function tiraHifen(telefone) {
     telefone.value = textoAjustado;
 }
 
+function validacaoEmail(field) {
+    usuario = field.value.substring(0, field.value.indexOf("@"));
+    dominio = field.value.substring(field.value.indexOf("@") + 1, field.value.length);
+
+    if ((usuario.length >= 1) &&
+        (dominio.length >= 3) &&
+        (usuario.search("@") == -1) &&
+        (dominio.search("@") == -1) &&
+        (usuario.search(" ") == -1) &&
+        (dominio.search(" ") == -1) &&
+        (dominio.search(".") != -1) &&
+        (dominio.indexOf(".") >= 1) &&
+        (dominio.lastIndexOf(".") < dominio.length - 1)) {
+        document.getElementById("msgemail").innerHTML = "E-mail válido";
+        //alert("E-mail válido");
+    } else {
+        document.getElementById("msgemail").innerHTML = "<font color='red'>E-mail inválido </font>";
+        //alert("E-mail inválido");
+    }
+}
 
 function cadstForm() {
-    alert("Você acabou de se cadastrar."); //SOMENTE TESTADOR//
+    //alert("Você acabou de se cadastrar."); //SOMENTE TESTADOR//
+}
+
+function userlogin(txtemail, txtpwd) {
+    var emailtxt = txtemail;
+    var pwdtxt = txtpwd;
+    alert("Olá," + emailtxt + "seja bem vindo!");
+
 }

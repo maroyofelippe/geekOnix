@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Teste Formulário com Boostrap</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<script type="text/javascript" src="funcoes.js"></script>
+</head>
+<body>
+	<form name="f1" method="get" action=".">
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom01">Nome</label>
+      <input type="text" class="form-control" id="campo1" placeholder="Nome" 
+       onKeyUp="tabenter(event,getElementById('campo2'))" required>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom02">Sobrenome</label>
+      <input type="text" class="form-control" id="campo2" placeholder="Sobrenome"onKeyUp="tabenter(event,getElementById('campo3'))" required>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom03">CPF</label>
+      <input type="number" class="form-control" name="strCPF" id="campo3" onblur="testaCPF(strCPF.value)" 
+       onfocus="mascaraDoCpf(this)" placeholder="000.000.000-00" onKeyUp="tabenter(event,getElementById('cep'))" required>
+    </div>
+  </div>
+   <div class="form-row">
+    <div class="form-group col-md-2">
+    <label for="inputAddress04">CEP</label>
+    <input name="cep" type="text" maxlength="8" class="form-control" id="cep" onblur="pesquisacep(this.value);mascaraDeCep(this)" placeholder="00000-000"
+    onKeyUp="tabenter(event,getElementById('inputAddress02'))" required>
+   </div>
+  <div class="col-md-4 mb-3">
+    <label for="rua">Rua</label>
+    <input name="rua" type="text" class="form-control" id="rua" placeholder="R. Alcântara" disabled>
+  </div>
+  <div class="form-group col-md-2">
+    <label for="inputAddress02">Número</label>
+    <input type="number" class="form-control" id="inputAddress02" placeholder="113"
+    onKeyUp="tabenter(event,getElementById('inputAddress03'))">
+  </div>
+  <div class="form-group col-md-2">
+    <label for="inputAddress03">Complemento</label>
+    <input type="text" class="form-control" id="inputAddress03" placeholder="A" 
+     onKeyUp="tabenter(event,getElementById('telefone'))">
+  </div>
+</div>
+  <div class="form-row">
+    <div class="form-group col-md-3">
+      <label for="cidade">Cidade</label>
+      <input name="cidade" type="text" class="form-control" id="cidade" disabled>
+    </div>    
+    <div class="form-group col-md-3">
+      <label for="uf">Estado</label>
+      <input name="uf" type="text" class="form-control" id="uf" disabled>
+    </div>
+	 <div class="form-group col-md-3">
+      <label for="bairro">Bairro</label>
+      <input name="bairro" type="text" class="form-control" id="bairro" disabled>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="ibge">IBGE</label>
+      <input name="ibge" type="text" class="form-control" id="ibge" size="8" disabled>
+    </div>
+      <div class="form-group col-md-3">
+      <label for="telefone">Telefone</label>
+      <input name="telefone" type="text" maxlength="11" class="form-control" id="telefone"  placeholder="(11)9999-9999 ou (11)9999-99999"
+        onblur="mascaraDeTelefone(this)" onfocus="tiraHifen(this)" onKeyUp="tabenter(event,getElementById('email'))" required>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom03">E-mail</label>
+      <input type="text" class="form-control" name="email" id="email" onblur="validacaoEmail(f1.email)" maxlength="60" size='65'required>
+      <div id="msgemail"></div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Aceita todos os Termos.
+      </label>
+    </div>
+  </div>
+  <input type="button" value="Cadastrar" class="btn btn-primary" onclick="cadstForm()">
+</form>
+</body>
+</html>

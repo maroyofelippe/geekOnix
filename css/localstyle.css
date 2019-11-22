@@ -36,8 +36,6 @@
 
 #content4 {
     position: relative;
-    top: 413%;
-    left: 0%;
     width: 100%;
     height: 100%;
 }
@@ -66,7 +64,6 @@
 #mulheresbr {
     position: relative;
     margin: 5px;
-    height: 345px;
 }
 
 img.d-block w-100 {
@@ -74,7 +71,9 @@ img.d-block w-100 {
     height: auto;
 }
 
-.collapse i {
+.collapse i,
+.form-group i,
+.col-md-7 i {
     padding: 8px;
 }
 
@@ -87,8 +86,29 @@ img.d-block w-100 {
     padding: 5px;
 }
 
+.display-5 {
+    font-size: 2.0rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.display-6 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    text-decoration-line: underline;
+}
+
+.display-7 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-right: 2%;
+}
+
 @media screen and (max-width: 600px) {
-    p.lead {
+    p.lead,
+    img.img-hide {
         display: none;
     }
 }
