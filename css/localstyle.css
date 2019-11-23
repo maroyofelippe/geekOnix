@@ -12,7 +12,7 @@
     background-color: #E9ECEF;
     position: relative;
     margin: 0 auto;
-    width: 65%%;
+    width: 65%;
     height: 79%;
 }
 
@@ -43,7 +43,7 @@
 #footer {
     background-color: black;
     position: relative;
-    bottom: 0px%;
+    bottom: 0px;
     left: 0%;
     width: 100%;
 }
@@ -73,7 +73,8 @@ img.d-block w-100 {
 
 .collapse i,
 .form-group i,
-.col-md-7 i {
+.col-md-7 i,
+.col-md-6 i {
     padding: 8px;
 }
 

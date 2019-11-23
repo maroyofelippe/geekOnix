@@ -196,7 +196,7 @@ function validacaoEmail(field) {
 }
 
 function cadstForm() {
-    //alert("Você acabou de se cadastrar."); //SOMENTE TESTADOR//
+    alert("Cadastro realizado com sucesso."); //SOMENTE TESTADOR//
 }
 
 function userlogin(txtemail, txtpwd) {
