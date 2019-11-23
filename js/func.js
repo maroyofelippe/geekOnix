@@ -28,6 +28,7 @@ function testaCPF(strCPF) {
     }
 
     if (Resto != parseInt(strCPF.substring(9, 10))) {
+
         alert("O número do CPF é inválido");
         resultadoInvalido = "inválido";
     }
@@ -54,6 +55,7 @@ function testaCPF(strCPF) {
 
 //Testa o CEP e adiciona Cidade,Estado,Bairro... Utilizar no Id exatamente como está os nomes do Id para campo FUNCIONANDO// 
 function limpa_formulário_cep() {
+    document.getElementById('cep').value = ("");
     document.getElementById('rua').value = ("");
     document.getElementById('bairro').value = ("");
     document.getElementById('cidade').value = ("");
@@ -197,7 +199,27 @@ function validacaoEmail(field) {
 
 function cadstForm() {
     alert("Cadastro realizado com sucesso."); //SOMENTE TESTADOR//
+    limpaFormAll();
 }
+
+function limpaFormAll() {
+    document.getElementById('campo1').value = ("");
+    document.getElementById('campo2').value = ("");
+    document.getElementById('campo3').value = ("");
+    document.getElementById('cep').value = ("");
+    document.getElementById('rua').value = ("");
+    document.getElementById('bairro').value = ("");
+    document.getElementById('cidade').value = ("");
+    document.getElementById('uf').value = ("");
+    document.getElementById('inputAddress2').value = ("");
+    document.getElementById('inputAddress3').value = ("");
+    document.getElementById('telefone').value = ("");
+    document.getElementById('email').value = ("");
+    document.getElementById('password').value = ("");
+    document.getElementById('password2').value = ("");
+}
+
+
 
 function userlogin(txtemail, txtpwd) {
     var emailtxt = txtemail;
@@ -205,3 +227,5 @@ function userlogin(txtemail, txtpwd) {
     alert("Olá," + emailtxt + "seja bem vindo!");
 
 }
+
+

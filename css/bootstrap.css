@@ -70,7 +70,9 @@
                         line-height: 1.5;
                         color: #212529;
                         text-align: left;
+                        position: relative;
                         background-color: #3FA4B5;
+                        transition: 0.5s ease;
                     }
                     
                     [tabindex="-1"]:focus {
