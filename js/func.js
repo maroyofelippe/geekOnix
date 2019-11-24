@@ -6,6 +6,20 @@ function tabenter(event, campo) {
     }
 }
 
+//Coloca Nome e Sobrenome em Maiúsculo
+
+function nomeUppercase() {
+    var x = document.getElementById("campo1");
+    x.value = x.value.replace(/[0-9]/g, '');
+    x.value = x.value.toUpperCase();
+}
+
+function sobrenoUppercase() {
+    var x = document.getElementById("campo2");
+    x.value = x.value.replace(/[0-9]/g, '');
+    x.value = x.value.toUpperCase();
+}
+
 //Testa o CPF FUNCIONANDO//
 function testaCPF(strCPF) {
     var Soma;
@@ -227,5 +241,3 @@ function userlogin(txtemail, txtpwd) {
     alert("Olá," + emailtxt + "seja bem vindo!");
 
 }
-
-

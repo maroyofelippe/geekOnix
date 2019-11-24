@@ -348,13 +348,13 @@
                         <div class="form-row">
                             <div class="col-md-11 mb-3">
                                 <label for="validationCustom01">Nome</label>
-                                <input type="text" class="form-control" id="campo1" placeholder="Nome" onKeyUp="tabenter(event,getElementById('campo2'))" required>
+                                <input type="text" class="form-control" id="campo1" placeholder="Nome" onchange="nomeUppercase()" onKeyUp="tabenter(event,getElementById('campo2'))" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-md-11 mb-3">
                                 <label for="validationCustom02">Sobrenome</label>
-                                <input type="text" class="form-control" id="campo2" placeholder="Sobrenome" onKeyUp="tabenter(event,getElementById('campo3'))" required>
+                                <input type="text" class="form-control" id="campo2" placeholder="Sobrenome" onchange="sobrenoUppercase()" onKeyUp="tabenter(event,getElementById('campo3'))" required>
                             </div>
                         </div>
                         <div class="form-row">
@@ -430,7 +430,8 @@
                             <p id="letter" class="invalid">Uma Letra <b>minúscula</b></p>
                             <p id="capital" class="invalid">Uma letra <b>MAIÚSCULA</b></p>
                             <p id="number" class="invalid">Um <b>Número</b></p>
-                            <p id="length" class="invalid">Mínimo de  <b>8 Caracteres</b></p>
+                            <p id="length" class="invalid">Mínimo de <b>8 Caracteres</b></p>
+                            <p id="pswequal" class="invalid"><b>Senha não coincide</b></p>
                         </div>
 
                         <script>
@@ -497,7 +498,9 @@
                                     length.classList.remove("valid");
                                     length.classList.add("invalid");
                                 }
+
                             }
+
 
                             // When the user starts to type something inside the password field
                             myInput2.onkeyup = function() {
@@ -538,6 +541,15 @@
                                 } else {
                                     length.classList.remove("valid");
                                     length.classList.add("invalid");
+                                }
+                                // Valida Coincidência Senhas
+
+                                if (myInput.value == myInput2.value) {
+                                    length.value.remove("invalid");
+                                    length.value.add("valid");
+                                } else {
+                                    length.value.remove("valid");
+                                    length.value.add("invalid");
                                 }
                             }
                         </script>
