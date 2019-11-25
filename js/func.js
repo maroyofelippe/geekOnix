@@ -15,8 +15,8 @@ function limpaFormAll() {
     document.getElementById('bairro').value = ("");
     document.getElementById('cidade').value = ("");
     document.getElementById('uf').value = ("");
-    document.getElementById('inputAddress2').value = ("");
-    document.getElementById('inputAddress3').value = ("");
+    document.getElementById('inputAddress02').value = ("");
+    document.getElementById('inputAddress03').value = ("");
     document.getElementById('telefone').value = ("");
     document.getElementById('email').value = ("");
     document.getElementById('password1').value = ("");
@@ -25,6 +25,7 @@ function limpaFormAll() {
     document.getElementById("msgCPF").innerHTML = "";
     document.getElementById("msgSenha").innerHTML = "";
     document.getElementById("msgemail").innerHTML = "";
+    document.getElementById("msgCep").innerHTML = "";
 }
 //Coloca Nome e Sobrenome em Maiúsculo
 
@@ -124,7 +125,7 @@ function pesquisacep(valor) {
         } else {
             limpa_formulário_cep();
             document.getElementById("msgCep").innerHTML = "<font color='red'>CEP Inválido!!</font>";
-            alert("Formato de CEP inválido.");
+            //alert("Formato de CEP inválido.");
         }
     } else {
         limpa_formulário_cep();
@@ -133,8 +134,16 @@ function pesquisacep(valor) {
 //Fim do Testador de CEP//
 
 //Adiciona () e - ao número digitado no campo telefone,para ajudar no HTML usar maxlength="11" FUNCIONANDO//
-function mascaraDeTelefone(telefone) {
+
+function tiraHifen(telefone) {
     const textoAtual = telefone.value;
+    const textoAjustado = textoAtual.replace(/\-\(\)/g, '');
+
+    telefone.value = textoAjustado;
+}
+
+function mascaraDeTelefone(telefone) {
+    const textoAtual = telefone.value.replace(/[a-z]/g, '');
     const isCelular = textoAtual.length == 11;
     let textoAjustado;
     if (isCelular) {
@@ -183,13 +192,6 @@ function mascaraDoCpf(cpf) {
 //Fim do código testador de CPF//
 
 
-function tiraHifen(telefone) {
-    const textoAtual = telefone.value;
-    const textoAjustado = textoAtual.replace(/\-\(\)/g, '');
-
-    telefone.value = textoAjustado;
-}
-
 function validacaoEmail(field) {
     usuario = field.value.substring(0, field.value.indexOf("@"));
     dominio = field.value.substring(field.value.indexOf("@") + 1, field.value.length);
@@ -203,7 +205,7 @@ function validacaoEmail(field) {
         (dominio.search(".") != -1) &&
         (dominio.indexOf(".") >= 1) &&
         (dominio.lastIndexOf(".") < dominio.length - 1)) {
-        document.getElementById("msgemail").innerHTML = "E-mail válido";
+        document.getElementById("msgemail").innerHTML = "<font color='green'>E-mail válido</font>";
         //alert("E-mail válido");
     } else {
         document.getElementById("msgemail").innerHTML = "<font color='red'>E-mail inválido </font>";
@@ -245,6 +247,6 @@ function mostrarSenha() {
 function userlogin(txtemail, txtpwd) {
     var emailtxt = txtemail;
     var pwdtxt = txtpwd;
-    alert("Olá," + emailtxt + "seja bem vindo!");
+    alert("Olá," + emailtxt +  " seja bem vindo!");
 
 }
