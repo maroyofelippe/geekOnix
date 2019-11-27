@@ -26,6 +26,7 @@ function limpaFormAll() {
     document.getElementById("msgSenha").innerHTML = "";
     document.getElementById("msgemail").innerHTML = "";
     document.getElementById("msgCep").innerHTML = "";
+
 }
 //Coloca Nome e Sobrenome em Maiúsculo
 
@@ -214,13 +215,21 @@ function validacaoEmail(field) {
 }
 
 function cadstForm() {
-    alert("Cadastro realizado com sucesso."); //SOMENTE TESTADOR//
-    limpaFormAll();
+    var nome = document.getElementById("campo1");
+
+    if (nome.value != "") {
+        alert("Cadastro realizado com sucesso."); //SOMENTE TESTADOR//
+        limpaFormAll();
+    } else {
+        alert("Preencher os campos obrigatórios!");
+    }
+
 }
+
 
 function validatePassword() {
 
-    var password = document.getElementById("password1")
+    var password = document.getElementById("password1");
     var confirm_password = document.getElementById("password2");
 
     if (password.value != confirm_password.value) {
@@ -247,6 +256,6 @@ function mostrarSenha() {
 function userlogin(txtemail, txtpwd) {
     var emailtxt = txtemail;
     var pwdtxt = txtpwd;
-    alert("Olá," + emailtxt +  " seja bem vindo!");
+    alert("Olá," + emailtxt + " seja bem vindo!");
 
 }
