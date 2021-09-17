@@ -73,6 +73,7 @@
                         position: relative;
                         background-color: #3FA4B5;
                         transition: 0.5s ease;
+                        color: #fff;
                     }
                     
                     [tabindex="-1"]:focus {
